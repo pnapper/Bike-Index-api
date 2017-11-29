@@ -8,45 +8,26 @@
   <script src="bower_components/moment/min/moment.min.js"></script>
   <title>Tamagotchi</title>
 </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>My Tamagotchi</h1>
-      </div>
-      <h3>Add a new Tamagotchi:</h3>
-      <form id="formOne">
-        <label for='petname'>Pet Name</label>
-        <input class='petname'  type='text'>
-        <label for='food'>Amt Of Food(lbs)</label>
-        <input class='food'  type='number'>
-        <label for='attention'>Attention(mins)</label>
-        <input class='attention'  type='number'>
-        <label for='rest'>Rest(mins)</label>
-        <input class='rest'  type='number'>
-                <br>
-        <button type='submit'>Add Tamagotchi</button>
-      </form>
-      <br>
-      <div id="pic"></div>
-
-      <div id="output" hidden>
-      <h1>Amout of Food: <span id="food"></span></h1>
-      <button type="click"  id="feed">Feed Me</button>
-
-      <h1>Amout of Attention: <span id="attention"></span></h1>
-      <button type="click"  id="play">Play with Me</button>
-
-      <h1>Amt of Rest : <span id="sleep"></span></h1>
-      <button type="click"  id="rest">Put me to Bed</button>
-
-      <button type="click"  id="timepass">Time Pass</button>
-
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Bike</h1>
     </div>
-    <div id="dead" hidden>
-        <h1>Tamagotchi is dead!!!!</h1>
+    <h3>Search for Stolen Bikes:</h3>
+    <form id="formOne">
+      <label for='location'>City</label>
+      <input class='location'  type='text'>
+      
+      <button type='submit'>Search</button>
+    </form>
 
+    <br>
+    <!-- <div id="pic"></div> -->
+
+    <div id="output" hidden>
+      <h1>List of stolen bikes :</h1>
     </div>
 
-   </div>
-  </body>
+  </div>
+</body>
 </html>
