@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('.location').val("");
 
     $.ajax({
-      url: `https://bikeindex.org:443/api/v3/search?location=${location}&distance=60&stolenness=stolen`,
+      url: `https://bikeindex.org:443/api/v3/search?location=${location}&distance=100&stolenness=proximity`,
       type: 'GET',
       data: {
         format: 'json'
@@ -21,7 +21,7 @@ $(document).ready(function() {
           if (item.date_stolen <= currentDate && item.date_stolen >= pastweekDate) {
             var d = new Date(item.date_stolen*1000)
             var n = d.toUTCString();
-            $('#output').append(`${item.title}`+"<br>"+`${n}`+"<br>");
+            $('#output').append(`${item.title}`+"<br>"+`${n}`+"<br>"+`${item.stolen_location}`+"<br>");
           }
         });
       },
